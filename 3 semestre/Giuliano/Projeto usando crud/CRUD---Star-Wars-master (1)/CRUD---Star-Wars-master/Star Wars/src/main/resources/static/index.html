@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang = "en">
+  <head>
+    <meta charset = "utf-8">
+    <title>Star Wars</title>
+	
+    
+	<script src = "js/jquery.js"></script>
+	
+
+	<link href = "css/bootstrap.min.css" rel = stylesheet>
+
+	  <link rel="apple-touch-icon" sizes="57x57" href="assets/apple-icon-57x57.png">
+	  <link rel="apple-touch-icon" sizes="60x60" href="assets/apple-icon-60x60.png">
+	  <link rel="apple-touch-icon" sizes="72x72" href="assets/apple-icon-72x72.png">
+	  <link rel="apple-touch-icon" sizes="76x76" href="assets/apple-icon-76x76.png">
+	  <link rel="apple-touch-icon" sizes="114x114" href="assets/apple-icon-114x114.png">
+	  <link rel="apple-touch-icon" sizes="120x120" href="assets/apple-icon-120x120.png">
+	  <link rel="apple-touch-icon" sizes="144x144" href="assets/apple-icon-144x144.png">
+	  <link rel="apple-touch-icon" sizes="152x152" href="assets/apple-icon-152x152.png">
+	  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-icon-180x180.png">
+	  <link rel="icon" type="image/png" sizes="192x192"  href="assets/android-icon-192x192.png">
+	  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+	  <link rel="icon" type="image/png" sizes="96x96" href="assets/favicon-96x96.png">
+	  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+	  <link rel="manifest" href="assets/manifest.json">
+	  <meta name="msapplication-TileColor" content="#ffffff">
+	  <meta name="msapplication-TileImage" content="assets/ms-icon-144x144.png">
+	  <meta name="theme-color" content="#ffffff">
+
+	<script src = "./js/sla.js"></script>
+
+   
+  </head>
+
+
+  <body>
+		
+
+  		<div id = "painelBusca">
+
+            <div class = "form-group col-md-4">
+                <label>Lado da força</label>
+                <select id = "ladoForca" class="input-large form-control">
+                </select>
+            </div>
+		
+            <div class = "form-group col-md-4">
+                <label>Nome</label>
+                <select id = "nome" class="input-large form-control">
+                </select>
+            </div>
+
+			<div class = "form-group col-md-4">
+				<label>Planeta</label>
+				<select id = "planeta" class = "input-large form-control">
+				</select>
+			</div>
+
+		</div>
+
+		<button id = "busca" class = "btn btn-primary">Buscar</button>
+		<button id = "excluir" class = "btn btn-primary">Excluir</button>
+
+		<div class = "form-group" style = "margin-top:20px; width: 500px;">
+
+			<div class="campo" >
+				<label for = "campo_nome">Nome</label>
+				<input id = "campo_nome"/>
+			</div>
+
+			<div class = "campo">
+				<label>Lado da Força</label>
+				<select id="campo_ladoForca" class="Lado da força" style="width: 178PX; height: 27PX; ">
+				</select>
+			</div>
+
+			<div class="campo">
+				<label for = "campo_especie">Espécie</label>
+				<input id = "campo_especie"/>
+			</div>
+
+			<div class="campo">
+				<label for = "campo_planeta" >Planeta</label>
+				<input id = "campo_planeta"/>
+			</div>
+
+			<div class="campo">
+				<label for = "campo_planeta_regiao" >Regiao</label>
+				<input id = "campo_planeta_regiao"/>
+			</div>
+
+			<style>
+				.campo {
+					padding: 8px 16px;
+				}
+				.campo label{
+					width:110px;
+				}
+			</style>
+
+
+			<button id = "salvar"  class = "btn btn-primary" style = "align-self:center;"> Salvar </button>
+		</div>
+
+
+		<table class = "table table-bordered">
+			<caption>Personagens </caption>
+				<thead>
+					<tr> 
+						<th>Nome</th>
+						<th>Lado da Força</th>
+						<th>Espécie</th>
+						<th>Planeta</th>
+						<th>Regiao</th>
+					</tr> 
+				</thead> 
+				
+				<tbody id = "dadosPersonagem">
+					
+				</tbody> 
+		</table>
+
+  </body>
+  
+</html>
