@@ -1,0 +1,42 @@
+@font-face {
+     font-family: 'Rainbow';
+     src:url('../fonte/Rainbow_Bridge_Personal_Use.ttf') format('truetype');
+}
+
+.fundo {
+     background-color: #bba0ff;
+     width: 100%;
+}
+
+.cabecalho {
+     font-family: 'Rainbow';
+     font-size: 2em;
+     padding: 40px;
+}
+
+.campos {
+     border-style: solid;
+     border-color: #ffffff;
+     border-radius: 40px;
+     font-size: 1em;
+     font-family: 'Rainbow';
+     color: #ffffff;
+     width: 420px;
+     height: 20px;
+     padding: 20px;
+     margin: 10px;
+}
+
+.ctr-campos {
+     margin-left: 430px;
+     padding: 10px 0;
+     margin-top: -50px;
+}
+
+.cadastro {
+     font-size: 3em;
+     text-align: center;
+     font-family: 'Rainbow';
+     color: #ffffff;
+     margin-top: -50px;
+}
