@@ -3,15 +3,18 @@
      src:url('../fonte/Rainbow_Bridge_Personal_Use.ttf') format('truetype');
 }
 
-.fundo {
+body {
      background-color: #bba0ff;
      width: 100%;
+     margin: 0;
+     font-family: 'Rainbow';
 }
 
 .cabecalho {
      font-family: 'Rainbow';
      font-size: 2em;
      padding: 40px;
+     margin-top: -20px;
 }
 
 .campos {
