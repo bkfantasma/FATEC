@@ -1,5 +1,5 @@
 Aluno: Bruna Cristina Lopes
-Orientador: Fabiano Sabha
+Orientador: Emanuel Mineda Carneiro
 
  
 
@@ -53,11 +53,62 @@ Possível conteúdo de um prontuário:
 
 
 # 2ª Quinzena de maio
-
- 
-
 (coloque aqui tudo que você fez referente ao capítulo 2 no formato exato de BD)
 
+2. FUNDAMENTAÇÃO TÉCNICA
+	     Levantamento de requisitos juntamente ao cliente para o desenvolvimento do software (Broyde):	
+     O sistema deverá ser capaz de cadastrar o paciente, agendar sua consulta
+lembrando que, no processo de agendamento será necessário também escolher qual o tipo de procedimento a ser realizado e seu referente valor já pré-definido.
+     Todos os procedimentos, marcação de consulta, falta, falta sem avisar, remarcação, cancelamento, prescrições, registro da consulta anterior (caso aja) e contatos realizados serão exibidos na página inicial do paciente.
+     Após a consulta ser agendada serão enviados lembretes previamente configuráveis ao paciente, o lembrete deverá conter a data e hora da consulta e outras orientações necessárias, os mesmos podem ser enviados por e-mail, SMS ou whatsApp de forma automatizada, posteriormente enviar um link para confirmação da consulta agendada utilizando os mesmos canais.
+     Uma vez que o paciente chegou ao consultório a secretária terá a sua disposição a visualização da agenda e do cadastro do paciente a mesma receberá o pagamento e dará baixa no sistema, (lembrando que o pagamento pode ter sido efetuado anteriormente por transferência bancária) em seguida utilizará os dados do paciente para emitir a NF (Nota Fiscal) .
+     Ao iniciar a consulta, abrir uma tela com um modelo de prontuário médico para registrar e salvar após feitas as devidas anotações. Juntamente ao prontuário deve ser permitido também fazer o receituário e atestados (pré-moldados) sendo preciso a possibilidade de fazer a impressão destes documentos caso necessário, subsequente a receita um resumo dos medicamentos prescritos e sua forma de injeção é crucial que este possa ser impresso ou enviado por PDF ao paciente.
+     Por último o paciente será “catalogado” com uma etiqueta já pré-cadastrada. Por exemplo: “Depressão e Primeira vez”, cada etiqueta será gatilho para disparar uma sequência de e-mails precedentemente determinados. 
+     Em suma será agendada a próxima consulta do paciente, e juntamente a esta data, os dias em que serão enviadas notificações de lembrança da próxima consulta ao paciente.
+     Se possível integrar a prescrição ao memed.
+     Segue diagrama para melhor visualização dos requisitos listados acima:
+
+
+Figura 1 – Diagrama de Casos de Uso
+
+Fonte: CABEÇA, vozes na minha (2020) – DESCOBRIR COMO E MUDAR A FONTE PARA AUTORIA PRÓPRIA
+
+Para o acesso utilizando o usuário “secretário(a)”, será possível:
+•	Enviar e-mail’s;
+•	Agendar a consulta de seu paciente;
+•	Visualizar agenda; mas neste nível de usuário não é possível visualizar o prontuário ao clicar no horário reservado;
+•	Enviar lembretes via SMS;
+•	Editar cadastro pessoal e dos pacientes;
+•	Classificar pacientes em grupos, como por exemplo: atendidos por convênio ou atendidos no particular;
+•	Remarcar consultas;
+•	Des agendar consultas;
+•	Cadastrar pacientes;
+•	Editar agenda, como por ex.: sua forma de exibição.
+
+Para o acesso como “médico”, será possível:
+•	Editar agenda, como por exemplo: sua forma de exibição;
+•	Visualizar sua agenda geral, conseguindo observar todos os pacientes que serão atendidos durante a semana, ou mês, tendo uma visualização detalhada sobre cada paciente ao clicar sobre sua reserva na agenda, abrindo o prontuário do paciente;
+•	Gerar prontuário médico, será criado um arquivo PDF caso seja necessário imprimir;
+•	Gerar receita médica, com assinatura e carimbo digital, retornara um arquivo PDF para impressão para o paciente;
+•	Gerar atestado médico, será criado um arquivo PDF padrão com a informação preenchida pelo sistema;
+•	Catalogar doenças;
+
+Para acesso como “paciente”, será possível:
+•	Visualizar seu histórico de consultas;
+•	Consultar seu receituário no sistema;
+•	Fazer seu próprio cadastro;
+•	Editar cadastro;
+•	Visualizar agenda geral, neste nível de usuário não é possível ver detalhes, apenas o registro.
+
+2.1. Tecnologias Utilizadas e Suas Justificativas
+	     As tecnologias escolhidas para o devido desenvolvimento deste software foram: MySQL -8-communty para compor toda a estrutura do banco de dados, foi feita a utilização deste SGBD (Sistema de Gerenciamento de Banco de Dados) devido a sua alta performance o que é fortemente requisitado em sistemas WEB, consistência, integridade, uso gratuito, multiusuário, open surce, robusto e seguro, além disso, o SGBD é de fácil usabilidade e viabiliza realizar auditorias de acesso, para rastrear as atividades praticadas por cada usuário, sendo esta mais uma de suas vantagens. 
+Disponível em  https://www.linkoficial.com.br/mysql-o-que-e-para-que-serve-e-suas-vantagens/ acesso em 28/08/2020.  
+          Para todo o back-end foi escolhida uma linguagem de alto nível e open surce, o PHP-7 em razão de sua grande popularização, trabalhar com uma linguagem popular torna mais rico o número de recursos disponíveis, e também a quantidade de pessoas dispostas a ajudar, e consequentemente o número de tutoriais e artigos ao dispor, outro fator excelente, é dotada de uma sintaxe de fácil domínio torna o processo de aprendizagem mais aguçado e rápido sem contar as vastas funções nativas da linguagem, a mesma se dispõem de recursos que permite facilmente a integração com outras tecnologias além de ser gratuita e regozija-se de inúmeras CMS (Gerenciadores de Conteúdos) e Frameworks como alguns exemplos de Frameworks mais populares podemos apresentar o Word Press que mesmo as pessoas leigas em desenvolvimento conseguem construir seus sites a partir deste framework, entre os outros inúmeros frameworks disponíveis hoje, o PHP conta com o Laravel, que é o Framework mais utilizado no mundo, esse Framework elevou o nível de desenvolvimento com PHP, dando uma base sólida e de altíssimo nível para quem deseja criar aplicações de grande porte. Disponível em https://blog.especializati.com.br/7-motivos-para-aprender-php-em-2018/ acesso em 28/08/2020. Apesar da grande popularidade do Laravel o sistema foi desenvolvido utilizando o Codeigniter como principal Framework desta aplicação. 
+          Para o front-end as tecnologias escolhidas foram HTML5 que é o básico para a exibição das páginas WEB, JS (Java Script) e CSS (AINDA FALTA JUSTIFICAR ISSO AQUI)
+
+
+
+     E juntamente a todos os motivos anteriormente listados é preciso também levar em consideração a familiaridade do desenvolvedor com as tecnologias escolhidas.
  
 
 # 1ª Quinzena de junho
